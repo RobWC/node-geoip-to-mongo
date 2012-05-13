@@ -4,7 +4,7 @@ var geoArray = new Array();
 var recordCount = 1;
 
 var GeoEntry = function(subnetStart, subnetEnd, numberStart, numberEnd, countryCode, countryString) {
-  this.subnetStart = subnetStart, this.subnetEnd = subnetEnd, this.numberStart = numberStart, this.numberEnd = numberEnd, this.countryCode = countryCode, this.countryString = countryString
+  this.subnetStart = subnetStart, this.subnetEnd = subnetEnd, this.numberStart = parseInt(numberStart), this.numberEnd = parseInt(numberEnd), this.countryCode = countryCode, this.countryString = countryString
 };
 
 GeoEntry.constructor = GeoEntry;
