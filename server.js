@@ -8,6 +8,18 @@ var GeoEntry = function(subnetStart, subnetEnd, numberStart, numberEnd, countryC
 };
 
 GeoEntry.constructor = GeoEntry;
+find({
+  $and: [{
+    'numberStart': {
+      $gte: 134744064
+    }
+  }, {
+    'numberEnd': {
+      $lte: 134744064
+    }
+  }]
+})
+find( { $and: [ { a: 1 }, { a: { $gt: 5 } } ] } )
 
 var pushToMongo = function(array) {
   var db = new mongo.Db('geo', new mongo.Server('localhost', 27017, {}), {});
