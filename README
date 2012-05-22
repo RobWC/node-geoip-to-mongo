@@ -1,0 +1,2 @@
+Query:
+db.iptocn.find({numberStart: {$lte: IPNUMTOCHECK}}).sort({numberStart: -1}).limi
