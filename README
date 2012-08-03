@@ -1,2 +1,6 @@
 Query:
 db.iptocn.find({numberStart: {$lte: IPNUMTOCHECK}}).sort({numberStart: -1}).limit(1)
+
+To convert to number:
+var spIP = 'IPADDR'.split('.')
+num = (16777216 *  spIP[0]) + (65536*spIP[1]) + (256* spIP[2]) +(spIP[3])
